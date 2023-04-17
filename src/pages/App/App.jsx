@@ -7,11 +7,12 @@ import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 
 export default function App() {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
 
   return (
     <main className="App">
-      { user ?
+      <h1>App</h1>
+      { user ? (
           <>
             <NavBar />
             <Routes>
@@ -20,9 +21,9 @@ export default function App() {
               <Route path="/orders" element={<OrderHistoryPage />} />
             </Routes>
           </>
-          :
+          ): (
           <AuthPage />
-      }
+      )}
     </main>
   );
 }
