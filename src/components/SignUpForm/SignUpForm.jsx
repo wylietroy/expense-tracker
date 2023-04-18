@@ -25,6 +25,7 @@ import {signUp} from '../../utilities/users-service';
           delete formData.error;
           delete formData.confirm;
           const user = await signUp(formData);
+          console.log(user)
         } catch (err) {
           // An error occurred 
           console.log(err);
