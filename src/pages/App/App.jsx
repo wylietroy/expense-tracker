@@ -5,16 +5,18 @@ import AuthPage from '../AuthPage/AuthPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
+import { getUser } from '../../utilities/users-service';
+import SignUpForm from '../../components/SignUpForm/SignUpForm';
 
 export default function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(getUser());
 
   return (
     <main className="App">
       <h1>App</h1>
       { user ? (
           <>
-            <NavBar />
+            <NavBar user={user} setUser={ setUser} />
             <Routes>
               {/* Route components in here */}
               <Route path="/orders/new" element={<NewOrderPage />} />
@@ -22,7 +24,8 @@ export default function App() {
             </Routes>
           </>
           ): (
-          <AuthPage />
+          <AuthPage setUser={ setUser} />
+          
       )}
     </main>
   );

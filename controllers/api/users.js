@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require('../../models/user');
+const bcrypt = require('bcrypt');
 
 async function create(req, res) {
     try {
@@ -29,10 +30,29 @@ function createJWT(user) {
       process.env.SECRET,
       { expiresIn: '24h' }
     );
-  }  
+  } 
 
+async function login(req, res) {
+  // req.body = {email & password}
+  try {
+    // check DB for matching email
+    const user = await User.findOne({ email: req.body.email });
+    if (!user) throw new Error();
+    // check if password matches
+    const match = await bcrypt.compare(req.body.password, user.password);
+    // If it doesn't respond with error. throw triggers catch block
+    if (!match) throw new Error();
+    // If it does create a token and respond with it
+    res.json( createJWT(user) );
+  } catch {
+    res.status(400).json('Bad Credentials');
+  }
+}
 
 module.exports = {
     create,
+    login,
 };
+
+
 
