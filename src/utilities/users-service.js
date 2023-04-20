@@ -26,6 +26,11 @@ export async function signUp(userData) {
     }
     return token;
   }
+
+  export async function checkToken() {
+    const dateStr = await usersAPI.checkToken();
+    return new Date(dateStr);
+  }
   
   export function getUser() {
     const token = getToken();

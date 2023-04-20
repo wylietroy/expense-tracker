@@ -2,6 +2,12 @@ const jwt = require('jsonwebtoken');
 const User = require('../../models/user');
 const bcrypt = require('bcrypt');
 
+async function checkToken(req, res) {
+  // req.user will always be there for you when a token is sent
+  console.log('req.user', req.user);
+  res.json(req.exp);
+}
+
 async function create(req, res) {
     try {
         // Add the user to the database
@@ -50,6 +56,7 @@ async function login(req, res) {
 }
 
 module.exports = {
+    checkToken,
     create,
     login,
 };
