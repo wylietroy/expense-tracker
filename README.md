@@ -9,6 +9,8 @@
 
 5) add DATABASE_URL & SECRET to .env
 
+6) nodemon server to run server side / npm start to run REACT app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
