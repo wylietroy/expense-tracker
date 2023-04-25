@@ -9,7 +9,13 @@
 
 5) add DATABASE_URL & SECRET to .env
 
-6) nodemon server to run server side / npm start to run REACT app
+6) "npm i" to install dependencies 
+
+7) "nodemon server" to run server side / "npm start" to run REACT app
+
+8) cntrl + C to stop 
+
+9) "npx kill-port 3000" if you close app without stoping 
 
 # Getting Started with Create React App
 
