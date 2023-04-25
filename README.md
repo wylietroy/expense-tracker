@@ -1,3 +1,14 @@
+# How To Use Template
+1) git clone https://github.com/BoognishSaves/mern-infrastructure.git < name-of-project >
+
+2) git remote remove origin
+
+3) shift + cmmd + P to create new repo
+
+4) touch .env and add to .gitignore
+
+5) add DATABASE_URL & SECRET to .env
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
