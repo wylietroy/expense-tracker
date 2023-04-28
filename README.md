@@ -1,91 +1,39 @@
-# How To Use Template
-1) git clone https://github.com/BoognishSaves/mern-infrastructure.git < name-of-project >
+# Cash Control
 
-2) git remote remove origin
+## Product Description
 
-3) shift + cmmd + P to create new repo
+Introducing the solution to managing your finances! With Cash Control you can easily track your daily expenses, and keep a watch over how much you are spending to make sure you can keep your budget where you need it to be.
 
-4) touch .env and add to .gitignore
+Cash Control will have an easy way to navagate through the entire process to make it easier for you with out any complicated process. Cash Control will allow you to view your history of both your earnings and your expenses, giving you insight to where you are putting your money and help you make financial decisions going forward. You will be able to add monthly or yearly payments to Cash Control as well, to keep track of everything with those bills being included.
 
-5) add DATABASE_URL & SECRET to .env
+Whether you're looking to save money save money, manage your expenses, or just to know what your expenses are, Cash Control will help you with all of your needs.
 
-6) "npm run build" 
 
-7) "npm i" to install dependencies 
+## Epic
 
-8) "nodemon server" to run server side / "npm start" to run REACT app
+As a user, they will be able to add earnings and take out expenses that will keep track of the total. The user will need to sign up if not already loged in. After being logged in they can start adding earnings or expenses and this will all be kept in the history of their transactions. If the user has monthly payments with rent or car payments they will be able to add that to the Auto Transactions on the second page of the website.
 
-9) cntrl + C to stop 
+## User Stories
 
-10) "npx kill-port 3000" if you close app without stoping 
+* As a User 
+* As a User
+* As a User
+* As a User
+* As a User
+* As a User
+* As a User
+* As a User
 
-# Getting Started with Create React App
+# Scope/MVP Requirements
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My goal is to build a full stack MERN application called "Cash Control". This will allow the user to track their transactions that they have made either being earnings or expenses. Using the tracker the user will add each transaction they preform while a total balance keeps track of all the +/- they have made.
 
-## Available Scripts
+1. Add a Transaction
+2. Either Earnings or Expenses change + Balance
+3. Transaction get added to History
+4. Add monthly payments
+5. 
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
