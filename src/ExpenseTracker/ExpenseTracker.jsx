@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import ExpenseForm from './ExpenseForm'
-import ExpenseList from './ExpenseList'
+import ExpenseForm from '../ExpenseForm/ExpenseForm'
+import ExpenseList from '../ExpenseList/ExpenseList'
 
 function ExpenseTracker() {
     const [expenses, setExpenses] = useState([]);
 
-    const addExpenses = expense => {
-        setExpenses([...expenses, expense])
+    const addExpense = (expense) => {
+        setExpenses([...expenses, expense]);
     };
 
     return (

@@ -10,12 +10,14 @@ function ExpenseList(props) {
                 </tr>
             </thead>
             <tbody>
-                {props.expense.map((expense, index) => (
+                {/* {props.expense.map((expense, index) => (
                     <tr key={index}>
                         <td>{expense.title}</td>
                         <td>{expense.amount}</td>
                     </tr>
                 ))}
+                 */}
+
             </tbody>
         </table>
     );

@@ -15,14 +15,14 @@ As a user, they will be able to add earnings and take out expenses that will kee
 
 ## User Stories
 
-* As a User 
-* As a User
-* As a User
-* As a User
-* As a User
-* As a User
-* As a User
-* As a User
+* As a User be able to sign up
+* As a User be able to log in
+* As a User be able to add a everyday transaction
+* As a User be able to add monthly/yearly payments
+* As a User be able to see earning and expenses total
+* As a User be able to see total balance
+* As a User be able to see history of transactions
+* As a User be able to log out
 
 # Scope/MVP Requirements
 
