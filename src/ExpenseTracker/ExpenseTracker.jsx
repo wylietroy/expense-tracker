@@ -6,6 +6,7 @@ import './ExpenseTracker.css';
 function ExpenseTracker() {
     const [expenses, setExpenses] = useState([]);
     const [transactions, setTransactions] = useState([]);
+    // const [frequency, setFrequency] = useState('monthly')
   
     const addExpense = (expense) => {
       setExpenses([...expenses, expense]);

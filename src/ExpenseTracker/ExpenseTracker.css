@@ -20,7 +20,7 @@
   }
   
   label {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     font-size: 18px;
   }
   
@@ -47,5 +47,5 @@
   }
 
   body {
-    background-color: #ddd;
+    background-color: #a5a5a5;
   }

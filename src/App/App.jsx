@@ -29,33 +29,3 @@ export default function App() {
   );
 }
 
-
-// import React from 'react';
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import NavBar from '../../components/NavBar/NavBar';
-// import LoginForm from '../../components/LoginForm/LoginForm';
-// import SignupForm from '../../components/SignupForm/SignupForm';
-// import ExpenseTracker from '../../ExpenseTracker/ExpenseTracker';
-
-// function App() {
-//   return (
-//     <Router>
-//       <div>
-//         <NavBar />
-//         <Switch>
-//           <Route path="/login">
-//             <LoginForm />
-//           </Route>
-//           <Route path="/signup">
-//             <SignupForm />
-//           </Route>
-//           <Route path="/">
-//             <ExpenseTracker />
-//           </Route>
-//         </Switch>
-//       </div>
-//     </Router>
-//   );
-// }
-
-// export default App;
