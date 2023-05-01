@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import ExpenseForm from '../ExpenseForm/ExpenseForm'
 import ExpenseList from '../ExpenseList/ExpenseList'
-import '../ExpenseTracker/ExpenseTracker.css';
+import './ExpenseTracker.css';
 
 function ExpenseTracker() {
     const [expenses, setExpenses] = useState([]);
@@ -13,7 +13,7 @@ function ExpenseTracker() {
     };
   
     return (
-      <div className="container">
+      <div className="container-et">
         <h1>Expense Tracker</h1>
         <ExpenseForm addExpense={addExpense} />
         <div className="transactions-container">

@@ -34,7 +34,7 @@ function ExpenseForm({ addExpense }) {
           </select>
         </label>
         <br />
-        <button type="submit">Add</button>
+        <button className="efbtn" type="submit">Add</button>
       </form>
     );
   }

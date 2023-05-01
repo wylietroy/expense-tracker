@@ -1,0 +1,52 @@
+.form-container-su {
+    margin: 20px auto;
+    width: 300px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .su {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 92%;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .btsu {
+    width: 100%;
+    background-color: #FFB6C1;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btsu:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
