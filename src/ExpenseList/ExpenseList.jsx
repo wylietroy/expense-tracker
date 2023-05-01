@@ -16,6 +16,9 @@ function ExpenseList({ expenses }) {
   
     return (
       <div>
+        <h2>Total:</h2>
+        <p>${total}</p>
+
         <h2>Earnings:</h2>
         <ul>
           {earnings.map((expense) => (
@@ -36,8 +39,7 @@ function ExpenseList({ expenses }) {
         </ul>
         <p>Total Expenses: ${totalExpenses}</p>
   
-        <h2>Total:</h2>
-        <p>${total}</p>
+        
       </div>
     );
   }

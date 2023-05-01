@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import AuthPage from '../AuthPage/AuthPage';
-import NavBar from '../../components/NavBar/NavBar';
-import { getUser } from '../../utilities/users-service';
-import SignUpForm from '../../components/SignUpForm/SignUpForm';
-import ExpenseTracker from '../../ExpenseTracker/ExpenseTracker';
+import AuthPage from '../pages/AuthPage/AuthPage';
+import NavBar from '../components/NavBar/NavBar';
+import { getUser } from '../utilities/users-service';
+import SignUpForm from '../components/SignUpForm/SignUpForm';
+import ExpenseTracker from '../ExpenseTracker/ExpenseTracker';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
