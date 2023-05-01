@@ -18,7 +18,7 @@ function ExpenseForm(props) {
     return (
         <form onSubmit={handleSubmit}>
             <div className="form-group">
-                <label htmlFor="title">Title</label>
+                <label htmlFor="title">For</label>
                 <input type="text" className="form-control" id="title" value={title} onChange={event => setTitle(event.target.value)} 
                 />
             </div>
