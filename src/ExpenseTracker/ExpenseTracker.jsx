@@ -12,7 +12,7 @@ function ExpenseTracker() {
     return (
         <div className="container">
             <h1>Expense Tracker</h1>
-            <ExpenseForm onAddExpense = {addExpense} />
+            <ExpenseForm addExpense = {addExpense} />
             <ExpenseList expenses={expenses} />
         </div>
     );
