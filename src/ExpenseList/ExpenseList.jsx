@@ -15,7 +15,9 @@ function ExpenseList({ expenses }) {
     const total = totalEarnings - totalExpenses;
   
     return (
+        
       <div>
+        
         <h2>Total:</h2>
         <p>${total}</p>
 
