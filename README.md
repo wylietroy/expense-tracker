@@ -37,19 +37,19 @@ My goal is to build a full stack MERN application called "Cash Control". This wi
 7. Log Out
 
 
-
+## Wireframe
 
 ![Alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/wylietroy/Desktop/Screenshot%202023-05-02%20at%206.48.31%20PM.png?version%3D1683067724697)
 
 
-#Sign Up
+# Sign Up
 
 ![Alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/wylietroy/Desktop/Screenshot%202023-05-02%20at%206.51.14%20PM.png?version%3D1683068029653)
 
-#Tracker
+# Tracker
 
 ![Alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/wylietroy/Desktop/Screenshot%202023-05-02%20at%206.51.27%20PM.png?version%3D1683068073876)
 
-#Tracker with Earnings/Expenses
+# Tracker with Earnings/Expenses
 
 ![Alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/wylietroy/Desktop/Screenshot%202023-05-02%20at%206.52.30%20PM.png?version%3D1683068129281)
