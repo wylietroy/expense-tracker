@@ -2,16 +2,10 @@ import React, {useState, useEffect} from 'react';
 import ExpenseForm from '../ExpenseForm/ExpenseForm'
 import ExpenseList from '../ExpenseList/ExpenseList'
 import './ExpenseTracker.css';
+import axios from 'axios';
 
-// function ExpenseTracker() {
-//     const [expenses, setExpenses] = useState([]);
-//     const [transactions, setTransactions] = useState([]);
-  
-//     const addExpense = (expense) => {
-//       setExpenses([...expenses, expense]);
-//       setTransactions([...transactions, expense]);
-//     };
 
+// This is AFTER Implementing localStorage
 function ExpenseTracker() {
   const [expenses, setExpenses] = useState(() => {
     const savedExpenses = localStorage.getItem('expenses');
@@ -35,6 +29,12 @@ function ExpenseTracker() {
     setExpenses([...expenses, expense]);
     setTransactions([...transactions, expense]);
   };
+
+
+
+
+
+
   
     return (
       <div className="container-et">

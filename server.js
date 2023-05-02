@@ -20,13 +20,13 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Be sure to mount before routes
 app.use(require('./config/checkToken'));
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
 
-const expensesRouter = require('./routes/users');
-app.use('./routes/api/expenses', expensesRouter);
+const expensesRouter = require('./routes/expenses');
+app.use('/routes/expenses', expensesRouter);
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX/API requests
@@ -34,7 +34,7 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(port, function() {
-  console.log(`Express app running on port ${port}`);
+app.listen(3001, function() {
+  console.log(`Express app running on port 3001`);
 });
 

@@ -37,6 +37,10 @@
     font-weight: bold;
     cursor: pointer;
   }
+
+  .btsu:hover {
+    background-color: #ffa4b2;
+  }
   
   .btsu:disabled {
     background-color: #ccc;
