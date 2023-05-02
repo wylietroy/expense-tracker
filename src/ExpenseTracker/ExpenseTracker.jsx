@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ExpenseForm from '../ExpenseForm/ExpenseForm'
 import ExpenseList from '../ExpenseList/ExpenseList'
 import './ExpenseTracker.css';
@@ -6,7 +6,6 @@ import './ExpenseTracker.css';
 function ExpenseTracker() {
     const [expenses, setExpenses] = useState([]);
     const [transactions, setTransactions] = useState([]);
-    // const [frequency, setFrequency] = useState('monthly')
   
     const addExpense = (expense) => {
       setExpenses([...expenses, expense]);
@@ -34,4 +33,5 @@ function ExpenseTracker() {
       </div>
     );
   }
+  
 export default ExpenseTracker;
