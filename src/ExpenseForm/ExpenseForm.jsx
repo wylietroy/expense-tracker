@@ -17,6 +17,8 @@ import React, {useState, useEffect} from "react";
 //       setDate('');
 //     }
 
+
+// AJAX and localStorage
 function ExpenseForm({ addExpense }) {
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState(0);

@@ -30,6 +30,8 @@ import axios from 'axios';
 //     setTransactions([...transactions, expense]);
 //   };
 
+
+// AJAX and localStorage
 function ExpenseTracker() {
   const [expenses, setExpenses] = useState([]);
   const [transactions, setTransactions] = useState([]);
