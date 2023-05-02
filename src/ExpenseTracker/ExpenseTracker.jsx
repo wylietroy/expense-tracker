@@ -6,16 +6,45 @@ import axios from 'axios';
 
 
 // This is AFTER Implementing localStorage
-function ExpenseTracker() {
-  const [expenses, setExpenses] = useState(() => {
-    const savedExpenses = localStorage.getItem('expenses');
-    return savedExpenses ? JSON.parse(savedExpenses) : [];
-  });
+// function ExpenseTracker() {
+//   const [expenses, setExpenses] = useState(() => {
+//     const savedExpenses = localStorage.getItem('expenses');
+//     return savedExpenses ? JSON.parse(savedExpenses) : [];
+//   });
 
-  const [transactions, setTransactions] = useState(() => {
+//   const [transactions, setTransactions] = useState(() => {
+//     const savedTransactions = localStorage.getItem('transactions');
+//     return savedTransactions ? JSON.parse(savedTransactions) : [];
+//   });
+
+//   useEffect(() => {
+//     localStorage.setItem('expenses', JSON.stringify(expenses));
+//   }, [expenses]);
+
+//   useEffect(() => {
+//     localStorage.setItem('transactions', JSON.stringify(transactions));
+//   }, [transactions]);
+
+//   const addExpense = (expense) => {
+//     setExpenses([...expenses, expense]);
+//     setTransactions([...transactions, expense]);
+//   };
+
+function ExpenseTracker() {
+  const [expenses, setExpenses] = useState([]);
+  const [transactions, setTransactions] = useState([]);
+
+  useEffect(() => {
+    const savedExpenses = localStorage.getItem('expenses');
+    if (savedExpenses) {
+      setExpenses(JSON.parse(savedExpenses));
+    }
+
     const savedTransactions = localStorage.getItem('transactions');
-    return savedTransactions ? JSON.parse(savedTransactions) : [];
-  });
+    if (savedTransactions) {
+      setTransactions(JSON.parse(savedTransactions));
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('expenses', JSON.stringify(expenses));
@@ -26,15 +55,16 @@ function ExpenseTracker() {
   }, [transactions]);
 
   const addExpense = (expense) => {
-    setExpenses([...expenses, expense]);
-    setTransactions([...transactions, expense]);
+    axios
+      .post('/api/expenses', expense)
+      .then((response) => {
+        setExpenses([...expenses, expense]);
+        setTransactions([...transactions, expense]);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
-
-
-
-
-
-
   
     return (
       <div className="container-et">
