@@ -27,7 +27,7 @@ function ExpenseTracker() {
           </ul>
         </div>
         <div className="expenses-container">
-          <h2>Expenses:</h2>
+          {/* <h2>Expenses:</h2> */}
           <ExpenseList expenses={expenses} />
         </div>
       </div>
