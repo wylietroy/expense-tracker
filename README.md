@@ -28,12 +28,15 @@ As a user, they will be able to add earnings and take out expenses that will kee
 
 My goal is to build a full stack MERN application called "Cash Control". This will allow the user to track their transactions that they have made either being earnings or expenses. Using the tracker the user will add each transaction they preform while a total balance keeps track of all the +/- they have made.
 
-1. Add a Transaction
-2. Either Earnings or Expenses change + Balance
-3. Transaction get added to History
-4. Add monthly payments
-5. 
+1. Log In/ Sign Up
+2. Add a Transaction
+3. Earnings or Expenses change + Balance
+4. Transaction get added to History
+5. Add monthly payments with a Date
+6. Add yearly payments with a Date
+7. Log Out
 
 
 
 
+![Alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/wylietroy/Desktop/Screenshot%202023-05-02%20at%206.48.31%20PM.png?version%3D1683067724697)

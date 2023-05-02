@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <main className="App">
-      <h1>App</h1>
+      <h1>CashControl</h1>
       { user ? (
           <>
             <NavBar user={user} setUser={ setUser} />
