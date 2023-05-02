@@ -3,14 +3,38 @@ import ExpenseForm from '../ExpenseForm/ExpenseForm'
 import ExpenseList from '../ExpenseList/ExpenseList'
 import './ExpenseTracker.css';
 
-function ExpenseTracker() {
-    const [expenses, setExpenses] = useState([]);
-    const [transactions, setTransactions] = useState([]);
+// function ExpenseTracker() {
+//     const [expenses, setExpenses] = useState([]);
+//     const [transactions, setTransactions] = useState([]);
   
-    const addExpense = (expense) => {
-      setExpenses([...expenses, expense]);
-      setTransactions([...transactions, expense]);
-    };
+//     const addExpense = (expense) => {
+//       setExpenses([...expenses, expense]);
+//       setTransactions([...transactions, expense]);
+//     };
+
+function ExpenseTracker() {
+  const [expenses, setExpenses] = useState(() => {
+    const savedExpenses = localStorage.getItem('expenses');
+    return savedExpenses ? JSON.parse(savedExpenses) : [];
+  });
+
+  const [transactions, setTransactions] = useState(() => {
+    const savedTransactions = localStorage.getItem('transactions');
+    return savedTransactions ? JSON.parse(savedTransactions) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('expenses', JSON.stringify(expenses));
+  }, [expenses]);
+
+  useEffect(() => {
+    localStorage.setItem('transactions', JSON.stringify(transactions));
+  }, [transactions]);
+
+  const addExpense = (expense) => {
+    setExpenses([...expenses, expense]);
+    setTransactions([...transactions, expense]);
+  };
   
     return (
       <div className="container-et">
