@@ -11,6 +11,6 @@ router.post('/', usersCtrl.create);
 router.post('/login', usersCtrl.login);
 
 router.get('/', expensesCtrl.getAll);
-router.post('/', expensesCtrl.create)
+router.post('/', expensesCtrl.create);
 
 module.exports = router;

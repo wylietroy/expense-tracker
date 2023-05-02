@@ -22,9 +22,11 @@ app.use(require('./config/checkToken'));
 
 const port = process.env.PORT || 3001;
 
-const expensesRouter = require('./routes/users');
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
+
+const expensesRouter = require('./routes/users');
+app.use('./routes/api/expenses', expensesRouter);
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX/API requests
@@ -35,3 +37,4 @@ app.get('/*', function(req, res) {
 app.listen(port, function() {
   console.log(`Express app running on port ${port}`);
 });
+
