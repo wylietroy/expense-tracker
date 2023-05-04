@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react';
 import ExpenseForm from '../ExpenseForm/ExpenseForm'
 import ExpenseList from '../ExpenseList/ExpenseList'
 import './ExpenseTracker.css';
-import axios from 'axios';
-
 
 
 function ExpenseTracker() {
@@ -50,7 +48,7 @@ function ExpenseTracker() {
           <ul>
             {transactions.map((transaction) => (
               <li key={transaction.id}>
-                {transaction.description} - {transaction.type === 'earning' ? '+' : '-'} ${transaction.amount}
+                {transaction.description} for {transaction.type === 'earning' ? '+' : '-'} ${transaction.amount}
               </li>
             ))}
           </ul>
