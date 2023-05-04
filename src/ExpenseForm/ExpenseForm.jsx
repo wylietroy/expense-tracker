@@ -1,53 +1,5 @@
 import React, {useState} from "react";
 
-// function ExpenseForm({ addExpense}) {
-//     const [description, setDescription] = useState('');
-//     const [amount, setAmount] = useState(0);
-//     const [type, setType] = useState('expense');
-//     const [date, setDate] = useState('');
-//     const [frequency, setFrequency] = useState('none')
-  
-//     function handleSubmit(evt) {
-//       evt.preventDefault();
-//       const expense = { description, amount, type, date, frequency };
-//       addExpense(expense);
-//       setDescription('');
-//       setAmount(0);
-//       setType('expense');
-//       setDate('');
-//     }
-
-
-// AJAX and localStorage
-// function ExpenseForm({ addExpense }) {
-//   const [description, setDescription] = useState('');
-//   const [amount, setAmount] = useState(0);
-//   const [type, setType] = useState('expense');
-//   const [date, setDate] = useState('');
-//   const [frequency, setFrequency] = useState('none');
-
-//   const handleSubmit = (evt) => {
-//     evt.preventDefault();
-//     const expense = { description, amount, type, date, frequency };
-//     fetch('/api/expenses', {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/json' },
-//       body: JSON.stringify(expense),
-//     })
-//       .then((response) => response.json())
-//       .then((data) => {
-//         addExpense(data);
-//         setDescription('');
-//         setAmount(0);
-//         setType('expense');
-//         setDate('');
-//         setFrequency('none');
-//       })
-//       .catch((error) => {
-//         console.error(error);
-//       });
-//   };
-
 function ExpenseForm({ addExpense }) {
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
@@ -68,6 +20,7 @@ function ExpenseForm({ addExpense }) {
       .then((response) => response.json())
       .then((data) => {
         addExpense(data);
+        // console.log("Expense added:", data);
         setDescription("");
         setAmount("");
         setType("expense");
