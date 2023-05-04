@@ -47,7 +47,7 @@ app.post('/expenses', (req, res) => {
   res.status(201).json(newExpense); // send a response back to the client
 });
 
-mongoose.connect('mongodb+srv://wyliesebtroy:wylietroy@cluster0.4mb0mlc.mongodb.net/test', {
+mongoose.connect('mongodb://localhost:27017/expense-tracker', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
