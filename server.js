@@ -54,51 +54,27 @@ mongoose.connect('mongodb+srv://wyliesebtroy:wylietroy@cluster0.4mb0mlc.mongodb.
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error(err));
 
-  // app.post('/expenses', (req, res) => {
-  //   const { description, amount, type, date, frequency } = req.body;
-  //   const expense = new Expense({
-  //     description,
-  //     amount,
-  //     type,
-  //     date,
-  //     frequency
-  //   });
-  
-  //   expense.save()
-  //     .then((result) => res.json(result))
-  //     .catch((err) => console.error(err));
-  // });
 
-  app.post("/expenses", (req, res) => {
-    const { description, amount, type, date, frequency } = req.body;
-    const newExpense = new Expense({
-      description,
-      amount,
-      type,
-      date,
-      frequency,
-    });
-    newExpense.save((err, savedExpense) => {
-      if (err) {
-        console.error(err);
-        res.status(500).send("Error saving expense to database");
-      } else {
-        console.log("Expense saved:", savedExpense);
-        res.send(savedExpense);
-      }
-    });
+ app.post("/expenses", (req, res) => {
+  const { description, amount, type, date, frequency } = req.body;
+  const newExpense = new Expense({
+    description,
+    amount,
+    type,
+    date,
+    frequency,
   });
+  newExpense.save((err, savedExpense) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send("Error saving expense to database");
+    } else {
+      console.log("Expense saved:", savedExpense);
+      res.send(savedExpense);
+    }
+  });
+});
 
-
-// app.get('/', async (req, res) => {
-//   try {
-//     const expenses = await Expense.find({});
-//     res.json(expenses);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).send('Server Error');
-//   }
-// });
 
 app.get("/expenses", (req, res) => {
   Expense.find((err, expenses) => {
