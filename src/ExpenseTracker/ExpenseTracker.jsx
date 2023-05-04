@@ -5,67 +5,39 @@ import './ExpenseTracker.css';
 import axios from 'axios';
 
 
-// This is AFTER Implementing localStorage
-// function ExpenseTracker() {
-//   const [expenses, setExpenses] = useState(() => {
-//     const savedExpenses = localStorage.getItem('expenses');
-//     return savedExpenses ? JSON.parse(savedExpenses) : [];
-//   });
 
-//   const [transactions, setTransactions] = useState(() => {
-//     const savedTransactions = localStorage.getItem('transactions');
-//     return savedTransactions ? JSON.parse(savedTransactions) : [];
-//   });
-
-//   useEffect(() => {
-//     localStorage.setItem('expenses', JSON.stringify(expenses));
-//   }, [expenses]);
-
-//   useEffect(() => {
-//     localStorage.setItem('transactions', JSON.stringify(transactions));
-//   }, [transactions]);
-
-//   const addExpense = (expense) => {
-//     setExpenses([...expenses, expense]);
-//     setTransactions([...transactions, expense]);
-//   };
-
-
-// AJAX and localStorage
 function ExpenseTracker() {
   const [expenses, setExpenses] = useState([]);
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
-    const savedExpenses = localStorage.getItem('expenses');
-    if (savedExpenses) {
-      setExpenses(JSON.parse(savedExpenses));
-    }
+    const fetchExpenses = async () => {
+      try {
+        const response = await fetch('/expenses');
+        const data = await response.json();
+        setExpenses(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-    const savedTransactions = localStorage.getItem('transactions');
-    if (savedTransactions) {
-      setTransactions(JSON.parse(savedTransactions));
-    }
+    fetchExpenses();
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem('expenses', JSON.stringify(expenses));
-  }, [expenses]);
-
-  useEffect(() => {
-    localStorage.setItem('transactions', JSON.stringify(transactions));
-  }, [transactions]);
-
-  const addExpense = (expense) => {
-    axios
-      .post('/api/expenses', expense)
-      .then((response) => {
-        setExpenses([...expenses, expense]);
-        setTransactions([...transactions, expense]);
-      })
-      .catch((error) => {
-        console.error(error);
+  const addExpense = async (expense) => {
+    try {
+      const response = await fetch('/expenses', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(expense)
       });
+
+      const data = await response.json();
+      setExpenses([...expenses, data]);
+      setTransactions([...transactions, data]);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   
