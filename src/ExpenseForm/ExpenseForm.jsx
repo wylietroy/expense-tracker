@@ -25,7 +25,7 @@ function ExpenseForm({ addExpense }) {
         setAmount("");
         setType("expense");
         setDate("");
-        setFrequency("none");
+        setFrequency("N/A");
       })
       .catch((error) => console.error(error));
   }
@@ -42,19 +42,19 @@ return (
       </label>
       <label>
            Type
-           <select value={type} onChange={(evt) => setType(evt.target.value)}>
+           <select value={type} onChange={(e) => setType(e.target.value)} required>
              <option value="expense">Expense</option>
              <option value="earning">Earning</option>
            </select>
          </label>
       <label>
         Date:
-        <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+        <input type="text" value={date} onChange={(e) => setDate(e.target.value)} />
       </label>
       <label>
         Frequency:
         <select value={frequency} onChange={(e) => setFrequency(e.target.value)}>
-          <option value="none">None</option>
+          <option value="none">NA</option>
           <option value="monthly">Monthly</option>
           <option value="yearly">Yearly</option>
         </select>

@@ -49,7 +49,7 @@ function ExpenseTracker() {
           <ul>
             {transactions.map((transaction) => (
               <li key={transaction.id}>
-                {transaction.description} for {transaction.type === 'earning' ? '+' : '-'} ${transaction.amount}
+                {transaction.description}: {transaction.type === 'earning' ? '+' : '-'} ${transaction.amount} {transaction.frequency} {transaction.date}
               </li>
             ))}
           </ul>
